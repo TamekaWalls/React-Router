@@ -1,16 +1,20 @@
-import { Routes, Route, Link } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
+import Blue from "./components/Blue"
+import Red from "./components/Red"
+import Home from "./components/Home"
+import Navbar from "./components/Navbar"
 
 function App() {
 
   return (
     <div id="container">
       <h1>Hello React Router!</h1>
-      <div id="navbar">{/* navigation here */}</div>
+      <Navbar/>
       <div id="main-section">
         <Routes>
-          <Route path="/" element={<div>Home</div>} />
-          <Route path="/blue" element={<div className="blue">Blue</div>} />
-          <Route path="/red" element={<div className="red">Red</div>} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/blue" element={<Blue/>} />
+          <Route path="/red" element={<Red/>} />
         </Routes>
       </div>
     </div>
